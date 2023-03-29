@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_meetings"
+        android:icon="@drawable/ic_baseline_people_meeting_24"
+        android:title="@string/title_meetings" />
+
+    <item
+        android:id="@+id/navigation_attendances"
+        android:icon="@drawable/ic_attendace_list_alt_24"
+        android:title="@string/title_attendances" />
+
+    <item
+        android:id="@+id/navigation_notes"
+        android:icon="@drawable/ic_meeting_sticky_note_2_24"
+        android:title="@string/title_notes" />
+
+</menu>

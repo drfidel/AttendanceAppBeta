@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_meetings">
+
+    <fragment
+        android:id="@+id/navigation_meetings"
+        android:name="com.fidelsoft.attendanceappbeta.ui.meeting.MeetingFragment"
+        android:label="@string/title_meetings"
+        tools:layout="@layout/fragment_meetings" />
+
+    <fragment
+        android:id="@+id/navigation_attendances"
+        android:name="com.fidelsoft.attendanceappbeta.ui.attendance.AttendanceFragment"
+        android:label="@string/title_attendances"
+        tools:layout="@layout/fragment_attendances" />
+
+    <fragment
+        android:id="@+id/navigation_notes"
+        android:name="com.fidelsoft.attendanceappbeta.ui.notes.NotesFragment"
+        android:label= "@string/title_notes"
+        tools:layout="@layout/fragment_notes" />
+</navigation>
