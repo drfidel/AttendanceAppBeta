@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.attendance.attendancelistdetail.NewAttendanceListFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8sp">
+
+        <EditText
+            android:id="@+id/edtvMeetingTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints=""
+            android:hint="Meeting Title"
+            android:importantForAutofill="no"
+            android:inputType="textAutoComplete"
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            android:textColorHint="#78909C"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtvDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints=""
+            android:inputType="text|datetime"
+            android:hint="Time"
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            android:textColorHint="#78909C"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/edtvMeetingTitle"
+            app:layout_constraintTop_toBottomOf="@+id/edtvMeetingTitle" />
+
+        <EditText
+            android:id="@+id/edtvMeetingDuration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints=""
+            android:hint="Duration"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            android:textColorHint="#78909C"
+            app:layout_constraintEnd_toEndOf="@+id/edtvDate"
+            app:layout_constraintStart_toStartOf="@+id/edtvDate"
+            app:layout_constraintTop_toBottomOf="@+id/edtvDate" />
+
+        <Button
+            android:id="@+id/buttonSaveAttendanceList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Save Attendance List"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintEnd_toEndOf="@+id/edtvMeetingDuration"
+            app:layout_constraintStart_toStartOf="@+id/edtvMeetingDuration"
+            app:layout_constraintTop_toBottomOf="@+id/edtvMeetingDuration" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -3,13 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.75" />
         <entry key="app/src/main/res/layout/fragment_attendance_listing.xml" value="0.17083333333333334" />
-        <entry key="app/src/main/res/layout/fragment_attendances.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/fragment_attendances.xml" value="0.14023086789226166" />
         <entry key="app/src/main/res/layout/fragment_meetings.xml" value="0.16666666666666666" />
         <entry key="app/src/main/res/layout/fragment_meetings_listing.xml" value="0.17083333333333334" />
+        <entry key="app/src/main/res/layout/fragment_new_attendance_list.xml" value="0.45555555555555555" />
         <entry key="app/src/main/res/layout/fragment_notes.xml" value="0.16666666666666666" />
         <entry key="app/src/main/res/layout/rvattendanceitemlayout.xml" value="0.3416666666666667" />
+        <entry key="app/src/main/res/layout/rvmeetingitemlist.xml" value="0.3416666666666667" />
+        <entry key="app/src/main/res/layout/rvnotesitemlist.xml" value="0.33" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.16666666666666666" />
       </map>
     </option>
