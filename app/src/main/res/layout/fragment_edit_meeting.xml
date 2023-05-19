@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.meetingitem.MeetingItemFragment">
+    tools:context=".ui.editmeeting.EditMeetingFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
         android:padding="8sp">
 
         <EditText
-            android:id="@+id/edtvMeetingTitle"
+            android:id="@+id/edtvEditMeetingTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -30,7 +30,7 @@
             android:autofillHints="" />
 
         <EditText
-            android:id="@+id/edtvMeetingDate"
+            android:id="@+id/edtvEditMeetingDate"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -41,14 +41,14 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/black"
             android:textColorHint="#78909C"
-            app:layout_constraintEnd_toEndOf="@+id/edtvMeetingTitle"
-            app:layout_constraintStart_toStartOf="@+id/edtvMeetingTitle"
-            app:layout_constraintTop_toBottomOf="@+id/edtvMeetingTitle"
+            app:layout_constraintEnd_toEndOf="@+id/edtvEditMeetingTitle"
+            app:layout_constraintStart_toStartOf="@+id/edtvEditMeetingTitle"
+            app:layout_constraintTop_toBottomOf="@+id/edtvEditMeetingTitle"
             android:autofillHints=""
             android:importantForAutofill="no" />
 
         <EditText
-            android:id="@+id/edtvMeetingLocation"
+            android:id="@+id/edtvEditMeetingLocation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -59,21 +59,21 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/black"
             android:textColorHint="#78909C"
-            app:layout_constraintEnd_toEndOf="@+id/edtvMeetingDate"
-            app:layout_constraintStart_toStartOf="@+id/edtvMeetingDate"
-            app:layout_constraintTop_toBottomOf="@+id/edtvMeetingDate"
+            app:layout_constraintEnd_toEndOf="@+id/edtvEditMeetingDate"
+            app:layout_constraintStart_toStartOf="@+id/edtvEditMeetingDate"
+            app:layout_constraintTop_toBottomOf="@+id/edtvEditMeetingDate"
             android:autofillHints="" />
 
         <Button
-            android:id="@+id/buttonSaveMeeting"
+            android:id="@+id/buttonSaveEditMeeting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Save Meeting"
+            android:text="Save Edit Meeting"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            app:layout_constraintEnd_toEndOf="@+id/edtvMeetingLocation"
-            app:layout_constraintStart_toStartOf="@+id/edtvMeetingLocation"
-            app:layout_constraintTop_toBottomOf="@+id/edtvMeetingLocation" />
+            app:layout_constraintEnd_toEndOf="@+id/edtvEditMeetingLocation"
+            app:layout_constraintStart_toStartOf="@+id/edtvEditMeetingLocation"
+            app:layout_constraintTop_toBottomOf="@+id/edtvEditMeetingLocation" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

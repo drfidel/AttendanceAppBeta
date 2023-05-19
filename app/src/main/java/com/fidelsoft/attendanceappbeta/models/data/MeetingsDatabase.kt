@@ -91,12 +91,12 @@ abstract class MeetingsDatabase : RoomDatabase() {
             // Not needed if you only populate on creation.
             meetingDao.deleteAllMeetings()
 
-            var meeting = MeetingModel(
-                UUID.randomUUID().toString(),
-                "Kotlin with modes",
-            "12/12/2023",
-            "OutBox, kampala")
-            meetingDao.insertMeeting(meeting)
+//            var meeting = MeetingModel(
+//                UUID.randomUUID().toString(),
+//                "Kotlin with modes",
+//            "12/12/2023",
+//            "OutBox, kampala")
+//            meetingDao.insertMeeting(meeting)
 
         }
 
