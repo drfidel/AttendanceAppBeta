@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 The Attendee App Project
+ * Copyright (C) 2023 The Attendee App Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,42 +17,105 @@
 package com.fidelsoft.attendanceappbeta.ui.meeting
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.fidelsoft.attendanceappbeta.R
 import com.fidelsoft.attendanceappbeta.databinding.FragmentMeetingsBinding
+import com.fidelsoft.attendanceappbeta.repositories.MeetingsApplication
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MeetingFragment : Fragment() {
 
     private var _binding: FragmentMeetingsBinding? = null
+    private val adapter = MeetingListAdapter()
+
+    lateinit var recyclerView: RecyclerView
+
+    private val meetingViewModel: MeetingViewModel by viewModels {
+        MeetingViewModelFactory((this.activity?.application as MeetingsApplication).repository)
+    }
 
     // This property is only valid between onCreateView and
     // onDestroyView.
-    private val binding get() = _binding!!
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        // Add an observer on the LiveData returned by getAlphabetizedWords.
+        // The onChanged() method fires when the observed data changes and the activity is
+        // in the foreground.
+        meetingViewModel.allMeetings.observe(this) { meetings ->
+            // Update the cached copy of the meetings in the adapter.
+            meetings.let { adapter.submitList(it) }
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val meetingViewModel =
-            ViewModelProvider(this).get(MeetingViewModel::class.java)
+        // Inflate the layout for this fragment
+        val view: View = inflater.inflate(R.layout.fragment_meetings, container, false)
 
-        _binding = FragmentMeetingsBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        //setup recycler view
+        setupRecyclerView(view)
 
-        val textView: TextView = binding.textMeeting
-        meetingViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        //load fab resource
+        val fab = view.findViewById<FloatingActionButton>(R.id.fabAddNewMeeting)
+        fab?.setOnClickListener {
+            fabclicked(view)
         }
-        return root
+
+        return view
+    }
+
+    //setup recycler view
+    private fun setupRecyclerView(view: View) {
+        recyclerView = view.findViewById(R.id.rvListMeetings)
+
+        recyclerView.adapter = adapter
+        recyclerView.setHasFixedSize(true)
+
+        val layoutManager = LinearLayoutManager(this.context)
+        layoutManager.orientation = RecyclerView.VERTICAL
+
+        recyclerView.layoutManager = layoutManager
+
+        //click -+--listener to the adapter
+        adapter.setMyOnItemClickListener(object : MeetingListAdapter.rvItemClicked{
+            override fun onItemClicked(position: Int) {
+                Log.i(TAG,"$TAG RV click pressed$position")
+
+                //get data at position
+
+                adapterOnClick(position)
+
+            }
+        })
+    }
+
+    private fun adapterOnClick (position: Int){
+        Log.i(TAG,"$TAG RV Item pressed")
+    }
+
+    private fun fabclicked(view: View) {
+        Log.i(TAG,"$TAG FAB pressed")
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    companion object {
+        private const val TAG = "MeetingFragment"
     }
 }

@@ -1,4 +1,4 @@
-package com.fidelsoft.attendanceappbeta.ui.meetinglisting
+package com.fidelsoft.attendanceappbeta.ui.meetingitem
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -8,24 +8,24 @@ import android.view.View
 import android.view.ViewGroup
 import com.fidelsoft.attendanceappbeta.R
 
-class MeetingsListingFragment : Fragment() {
+class MeetingItemFragment : Fragment() {
 
     companion object {
-        fun newInstance() = MeetingsListingFragment()
+        fun newInstance() = MeetingItemFragment()
     }
 
-    private lateinit var viewModel: MeetingsListingViewModel
+    private lateinit var viewModel: MeetingItemViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_meetings_listing, container, false)
+        return inflater.inflate(R.layout.fragment_meetings_item, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MeetingsListingViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(MeetingItemViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

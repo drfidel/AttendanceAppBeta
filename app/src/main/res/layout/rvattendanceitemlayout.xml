@@ -20,57 +20,62 @@
             android:padding="4sp">
 
             <TextView
-                android:id="@+id/tvNotesTitle"
-                android:layout_width="0dp"
+                android:id="@+id/tvAttendeeName"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:padding="2sp"
-                android:text="Title: Programming with Android"
+                android:text="Akol Josephus"
                 android:textSize="15sp"
+                android:textAlignment="center"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tvNotesMeetingTitle"
+                android:id="@+id/tvEmailAddress"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:padding="2sp"
-                android:text="Date/Time: 01/01/2023 @ 10:00hrs"
+                android:text="akiyofidel@gmail.com"
                 android:textAlignment="center"
                 android:textSize="15sp"
-                app:layout_constraintEnd_toEndOf="@+id/tvNotesTitle"
-                app:layout_constraintStart_toStartOf="@+id/tvNotesTitle"
-                app:layout_constraintTop_toBottomOf="@+id/tvNotesTitle" />
+                app:layout_constraintEnd_toEndOf="@+id/tvAttendeeName"
+                app:layout_constraintStart_toStartOf="@+id/tvAttendeeName"
+                app:layout_constraintTop_toBottomOf="@+id/tvAttendeeName" />
 
             <TextView
-                android:id="@+id/tvNotesAuthor"
+                android:id="@+id/tvAttendeeContact"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:background="#CA8C8C"
                 android:padding="4sp"
-                android:text="222 Attendees"
+                android:text="0703-523-563"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvEmailAddress"
+                app:layout_constraintStart_toStartOf="@+id/tvEmailAddress"
+                app:layout_constraintTop_toBottomOf="@+id/tvEmailAddress" />
+
+            <TextView
+                android:id="@+id/tvTimeIn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="#CA8C8C"
+                android:padding="4sp"
+                android:text="Time in - 10 : 15 hrs"
                 android:textAlignment="center"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/tvNotesMeetingTitle"
-                app:layout_constraintStart_toStartOf="@+id/tvNotesMeetingTitle"
-                app:layout_constraintTop_toBottomOf="@+id/tvNotesMeetingTitle" />
+                app:layout_constraintEnd_toEndOf="@+id/tvAttendeeContact"
+                app:layout_constraintStart_toStartOf="@+id/tvAttendeeContact"
+                app:layout_constraintTop_toBottomOf="@+id/tvAttendeeContact" />
 
-            <Button
-                android:id="@+id/buOpenAttendanceList"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_margin="4dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:text="O"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tvNotesMeetingTitle"
-                app:layout_constraintTop_toTopOf="parent" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

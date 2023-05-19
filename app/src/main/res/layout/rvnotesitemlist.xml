@@ -35,7 +35,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tvNotesMeetingTitle"
+                android:id="@+id/tvMeetingNotesTitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -48,7 +48,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvNotesTitle" />
 
             <TextView
-                android:id="@+id/tvNotesAuthor"
+                android:id="@+id/tvNotesAuthorSource"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -59,9 +59,9 @@
                 android:textAlignment="center"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/tvNotesMeetingTitle"
-                app:layout_constraintStart_toStartOf="@+id/tvNotesMeetingTitle"
-                app:layout_constraintTop_toBottomOf="@+id/tvNotesMeetingTitle" />
+                app:layout_constraintEnd_toEndOf="@+id/tvMeetingNotesTitle"
+                app:layout_constraintStart_toStartOf="@+id/tvMeetingNotesTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvMeetingNotesTitle" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

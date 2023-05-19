@@ -23,7 +23,7 @@
             android:padding="4sp">
 
             <TextView
-                android:id="@+id/tvNotesTitle"
+                android:id="@+id/tvMeetingTitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -34,7 +34,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tvNotesMeetingTitle"
+                android:id="@+id/tvMeetingDate"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -42,12 +42,12 @@
                 android:text="Date/Time: 01/01/2023 @ 10:00hrs"
                 android:textAlignment="center"
                 android:textSize="15sp"
-                app:layout_constraintEnd_toEndOf="@+id/tvNotesTitle"
-                app:layout_constraintStart_toStartOf="@+id/tvNotesTitle"
-                app:layout_constraintTop_toBottomOf="@+id/tvNotesTitle" />
+                app:layout_constraintEnd_toEndOf="@+id/tvMeetingTitle"
+                app:layout_constraintStart_toStartOf="@+id/tvMeetingTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvMeetingTitle" />
 
             <TextView
-                android:id="@+id/tvNotesAuthor"
+                android:id="@+id/tvMeetingLocation"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -58,12 +58,12 @@
                 android:textAlignment="center"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/tvNotesMeetingTitle"
-                app:layout_constraintStart_toStartOf="@+id/tvNotesMeetingTitle"
-                app:layout_constraintTop_toBottomOf="@+id/tvNotesMeetingTitle" />
+                app:layout_constraintEnd_toEndOf="@+id/tvMeetingDate"
+                app:layout_constraintStart_toStartOf="@+id/tvMeetingDate"
+                app:layout_constraintTop_toBottomOf="@+id/tvMeetingDate" />
 
             <Button
-                android:id="@+id/buMeetOpenAttendanceList"
+                android:id="@+id/buViewAttendanceList"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="4dp"
@@ -72,7 +72,7 @@
                 android:text="O"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tvNotesMeetingTitle"
+                app:layout_constraintStart_toEndOf="@+id/tvMeetingDate"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
