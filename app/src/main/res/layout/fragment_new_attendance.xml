@@ -12,6 +12,24 @@
         android:padding="8sp">
 
         <EditText
+            android:id="@+id/edtvMeetingID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints=""
+            android:hint="Meeting ID"
+            android:importantForAutofill="no"
+            android:inputType="textAutoComplete"
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            android:textColorHint="#78909C"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
             android:id="@+id/edtvMeetingTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -25,54 +43,73 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/black"
             android:textColorHint="#78909C"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="@+id/edtvMeetingID"
+            app:layout_constraintStart_toStartOf="@+id/edtvMeetingID"
+            app:layout_constraintTop_toBottomOf="@+id/edtvMeetingID" />
 
         <EditText
-            android:id="@+id/edtvDate"
+            android:id="@+id/edtvAttendeeName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints=""
+            android:hint="Akiyo FIdel"
+            android:importantForAutofill="no"
+            android:inputType="textAutoComplete"
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            android:textColorHint="#78909C"
+            app:layout_constraintEnd_toEndOf="@+id/edtvMeetingTitle"
+            app:layout_constraintStart_toStartOf="@+id/edtvMeetingTitle"
+            app:layout_constraintTop_toBottomOf="@+id/edtvMeetingTitle" />
+
+
+        <EditText
+            android:id="@+id/edtvAttendeeEmail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:autofillHints=""
             android:inputType="text|datetime"
-            android:hint="Time"
+            android:hint="email@gmail.com"
             android:minHeight="48dp"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/black"
             android:textColorHint="#78909C"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/edtvMeetingTitle"
-            app:layout_constraintTop_toBottomOf="@+id/edtvMeetingTitle" />
+            app:layout_constraintStart_toStartOf="@+id/edtvAttendeeName"
+            app:layout_constraintTop_toBottomOf="@+id/edtvAttendeeName" />
 
         <EditText
-            android:id="@+id/edtvMeetingDuration"
+            android:id="@+id/edtvAttendeeProfession"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:autofillHints=""
-            android:hint="Duration"
+            android:hint="Profession"
             android:inputType="textPersonName"
             android:minHeight="48dp"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/black"
             android:textColorHint="#78909C"
-            app:layout_constraintEnd_toEndOf="@+id/edtvDate"
-            app:layout_constraintStart_toStartOf="@+id/edtvDate"
-            app:layout_constraintTop_toBottomOf="@+id/edtvDate" />
+            app:layout_constraintEnd_toEndOf="@+id/edtvAttendeeEmail"
+            app:layout_constraintStart_toStartOf="@+id/edtvAttendeeEmail"
+            app:layout_constraintTop_toBottomOf="@+id/edtvAttendeeEmail" />
 
         <Button
             android:id="@+id/buttonSaveAttendanceList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Save Attendance List"
+            android:text="Save Attendance"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            app:layout_constraintEnd_toEndOf="@+id/edtvMeetingDuration"
-            app:layout_constraintStart_toStartOf="@+id/edtvMeetingDuration"
-            app:layout_constraintTop_toBottomOf="@+id/edtvMeetingDuration" />
+            app:layout_constraintEnd_toEndOf="@+id/edtvAttendeeProfession"
+            app:layout_constraintStart_toStartOf="@+id/edtvAttendeeProfession"
+            app:layout_constraintTop_toBottomOf="@+id/edtvAttendeeProfession" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

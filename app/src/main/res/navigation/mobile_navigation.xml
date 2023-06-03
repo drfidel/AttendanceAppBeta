@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/navigation_attendances"
-        android:name="com.fidelsoft.attendanceappbeta.ui.attendance.AttendanceFragment"
+        android:name="com.fidelsoft.attendanceappbeta.ui.attendancelisting.AttendanceListingFragment"
         android:label="@string/title_attendances"
-        tools:layout="@layout/fragment_attendances" />
+        tools:layout="@layout/fragment_attendance_listing" />
 
     <fragment
         android:id="@+id/navigation_notes"

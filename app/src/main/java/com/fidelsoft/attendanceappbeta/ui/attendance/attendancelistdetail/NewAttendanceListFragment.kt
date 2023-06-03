@@ -20,7 +20,7 @@ class NewAttendanceListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_new_attendance_list, container, false)
+        return inflater.inflate(R.layout.fragment_new_attendance, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

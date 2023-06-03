@@ -84,6 +84,8 @@ class MeetingListAdapter() :
         )
     }
 
+    
+
     companion object{
         private val MEETINGS_COMPARATOR = object : DiffUtil.ItemCallback<MeetingModel>(){
             override fun areContentsTheSame(oldItem: MeetingModel, newItem: MeetingModel): Boolean {
